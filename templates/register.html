@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Application Form</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+	<div class="container">
+		<form action="" method="post">
+            {% csrf_token %}
+			<h2>Application Form</h2>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+            <br><br>
+            <label for="dob">Date of Birth:</label>
+		<input type="date" id="dob" name="dob" required>
+            <br><br>
+
+            <label for="age">age:</label>
+		<input type="text" id="dob" name="age" required>
+            <br><br>
+
+		<label for="gender">Gender:</label>
+		<select id="gender" name="gender" required>
+			<option value="">--Select--</option>
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+			<option value="other">Other</option>
+		</select>
+            <br><br>
+
+		<label for="phone">Phone Number:</label>
+		<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required>
+            <br><br>
+
+		<label for="address">Address:</label>
+		<textarea id="address" name="address" required></textarea>
+            <br><br>
+
+
+  <label for="district-select">Select a district:</label>
+  <select id="" name="district">
+
+
+
+      <option value="THIRUVANANDHAPURAM" >THIRUVANANDHAPURAM</option>
+      <option value="KOLLAM" >KOLLAM</option>
+      <option value="PATHANAMTHITTA" >PATHANAMTHITTA</option>
+      <option value="ALAPPUZHA" >ALAPPUZHA</option>
+      <option value="KOTTAYAM" >KOTTAYAM</option>
+      <option value="IDUKKI" >IDUKKI</option>
+      <option value="ERANAMKULAM" >ERANAMKULAM</option>
+      <option value="THRISSUR" >THRISSUR</option>
+      <option value="PALAKKAD" >PALAKKAD</option>
+      <option value="MALAPPURAM" >MALAPPURAM</option>
+      <option value="KOZHIKKODE" >KOZHIKKODE</option>
+      <option value="WAYANAD" >WAYANAD</option>
+      <option value="KANNUR" >KANNUR</option>
+      <option value="KASARKODE" >KASARKODE</option>
+
+
+
+
+  </select>
+            <br><br>
+            <label for="branch-select">Select a branch:</label>
+  <select id="" name="branch">
+
+      <option value="ALUVA" >ALUVA</option>
+      <option value="KALAMASSERI" >KALAMASSERI</option>
+      <option value="EDAPALLY" >EDAPALLY</option>
+      <option value="VYTILA" >VYTILA</option>
+      <option value="KALOOR" >KALOOR</option>
+      <option value="ADOOR" >ADOOR</option>
+      <option value="PALA" >PALA</option>
+      <option value="MANNARKKAD" >MANNARKKAD</option>
+      <option value="OTTAPPALAM" >OTTAPPALAM</option>
+      <option value="THALASSERI" >THALASSERI</option>
+      <option value="MUKKAM" >MUKKAM</option>
+      <option value="PERINTHALMANNA" >PERINTHALMANNA</option>
+      <option value="AREECODE" >AREECODE</option>
+      <option value="BATHERI" >BATHERI</option>
+      <option value="MANJWESHARAM" >MANJWESHARAM</option>
+
+  </select>
+<br><br>
+
+            <label for="account-type">Account Type:</label>
+		<select id="account-type" name="account_type" required>
+			<option value="">--Select--</option>
+			<option value="savings">Savings Account</option>
+			<option value="current">Current Account</option>
+		</select>
+<br><br>
+		<label for="materials-provide">Materials Provide:</label>
+		<input type="checkbox" id="debit-card" name="materials" value="debit-card">
+		<label for="debit-card">Debit Card</label>
+
+		<input type="checkbox" id="credit-card" name="materials" value="credit-card">
+		<label for="credit-card">Credit Card</label>
+                <input type="checkbox" id="cheque_book" name="materials" value="cheque_book">
+    <label for="cheque_book">Cheque Book</label>
+
+    <br><br>
+    <input type="submit" value="Submit" id="submit">
+
+              <script>
+                    $("#submit").click(function(){
+                            alert("Application approved.......!");
+                            });
+                        </script>
+  </form>
+    </div>
+    </body>
+        </html>
